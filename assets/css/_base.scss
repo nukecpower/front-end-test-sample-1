@@ -1,0 +1,60 @@
+@import 'mixins';
+
+html {
+	height: 100%;
+	font-size: 100%; // typically 16 px
+}
+
+body {
+	@include font-sans-serif;
+	position: relative;
+	line-height: (24 / 16);
+	background-color: $bgcolor;
+    margin: 0; padding: 0;
+    color: $basetextcolor; 
+
+    @include mq-max (640px) {
+        font-size: 14px; 
+    }
+}
+
+a {
+    color: $blue;
+    text-decoration: none; 
+	&:hover {
+		color: $darkblue;
+	}
+}
+
+
+.nomargin {
+    margin: 0; 
+}
+
+.button {
+    color: #363636;
+    cursor: pointer;
+    padding-bottom:.5em;
+    padding-left: .75em;
+    padding-right: .75em;
+    padding-top: .5em;
+    text-align: center;
+    white-space: nowrap;
+    &-filled {
+        background-color: #fff;
+    }
+
+    &-blue {
+        background-color: $blue; 
+        color: #fff; 
+        &:hover {
+            color: #fff;
+            background-color: $darkblue; 
+        }
+    }
+    &-rounded {
+        border-radius: 4px; 
+    }
+}
+
+//button button-filled button-blue

@@ -1,0 +1,29 @@
+@mixin font-sans-serif {
+    font-family: "Roboto", sans-serif;
+    font-display: auto;
+}
+
+@mixin font-serif {
+	font-family: serif;
+}
+
+
+
+/** MEDIA QUERY MIXINS **/
+@mixin mq($key, $value) {
+	@media screen and ($key : $value) {
+		@content;
+	}
+}
+
+@mixin mq-min($width) {
+	@include mq(min-width, $width) {
+		@content;
+	}
+}
+
+@mixin mq-max($width) {
+	@include mq(max-width, $width) {
+		@content;
+	}
+}

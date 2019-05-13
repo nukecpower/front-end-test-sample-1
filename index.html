@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sudirman | Cermati.com Front-end Developer Entry Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"> 
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+    <script>
+        $(function() {
+            $('.notificationpanel-action').click(function(){
+                $('.notificationpanel').slideUp(500, function() {
+                    $('.hero').addClass('herofull');
+                });
+            });
+
+            $('.subscriptionpanel .close').click(function(e){
+                $('.subscriptionpanel').removeClass('open');
+                e.preventDefault();
+                
+            });
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop()>300)
+                {
+                    alert('abc');
+                }
+
+            });
+        });
+    </script> 
+</head>
+<body>
+    <div class="notificationpanel">
+        <div class="wrapper">
+           <div class="notificationpanel-content">
+                <p>By accessing and using this website, you acknowledge that you have read and understand our Cookie Policy, Privacy Policy, and our Terms of Service.</p>
+            </div>
+            <a href="#" class="notificationpanel-action button button-filled button-blue button-rounded">Got it</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="hero-back">&nbsp;</div>
+        <div class="hero-front">
+            <div class="wrapper">
+                <div class="hero-content">
+                    <h1>Hello! I'm Sudirman</h1>
+                    <h2>Consult, Design, and Develop Websites</h2>
+                    <h3>Have something great in mind? Feel free to contact me.
+                    I'll help you to make it happen.</h3>
+                    <p><a href="#">Let's Make Contact</a></p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <section class="highlights">
+        <div class="intro">
+            <div class="wrapper">
+                <h4 class="intro-title">How Can I Help You?</h4>
+                <p>Our work then targeted, best practices outcomes social innovation synergy.
+                Venture philanthropy, revolutionary inclusive policymaker relief. User-centered
+                program areas scale.</p>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="highlights-panels">
+                <div class="hightlight-box">
+                    <h6 class="highlight-title">Consult</h6>
+                    <p>Co-create, design thinking; strengthen infrastructure resist granular. Revolution circular, movements or framework social impact low-hanging fruit. Save the world compelling revolutionary progress.</p>
+                    <span class="highlight-icon"><i class="fas fa-comment"></i></span>
+                </div>
+                <div class="hightlight-box">
+                    <h6 class="highlight-title">Design</h6>
+                    <p>Policymaker collaborates collective impact humanitarian shared value
+                            vocabulary inspire issue outcomes agile. Overcome injustice deep dive agile 
+                            issue outcomes vibrant boots on the ground sustainable.</p>
+                    <span class="highlight-icon"><i class="fas fa-paint-brush"></i></span>
+                </div>
+                <div class="hightlight-box">
+                    <h6 class="highlight-title">Develop</h6>
+                    <p>Revolutionary circular, movements a or impact framework social impact low-
+                            hanging. Save the compelling revolutionary inspire progress. Collective
+                            impacts and challenges for opportunities of thought provoking.</p>
+                    <span class="highlight-icon"><i class="fas fa-cubes"></i></span>
+                </div>
+                <div class="hightlight-box">
+                    <h6 class="highlight-title">Marketing</h6>
+                    <p>Peaceful; vibrant paradigm, collaborative cities. Shared vocabulary agile,
+                            replicable, effective altruism youth. Mobilize commitment to overcome
+                            injustice resilient, uplift social transparent effective.</p>
+                    <span class="highlight-icon"><i class="fas fa-bullhorn"></i></span>
+                </div>
+                <div class="hightlight-box">
+                    <h6 class="highlight-title">Manage</h6>
+                    <p>Change-makers innovation or shared unit of analysis. Overcome injustice
+                            outcomes strategize vibrant boots on the ground sustainable. Optimism,
+                            effective altruism invest optimism corporate social.</p>
+                    <span class="highlight-icon"><i class="fas fa-layer-group"></i></span>
+                </div>
+                <div class="hightlight-box">
+                    <h6 class="highlight-title">Evolve</h6>
+                    <p>Activate catalyze and impact contextualize humanitarian. Unit of analysis
+                            overcome injustice storytelling altruism. Thought leadership mass 
+                            incarceration. Outcomes big data, fairness, social game-changer.</p>
+                    <span class="highlight-icon"><i class="fas fa-chart-line"></i></span>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <div class="wrapper">
+            <p>Good luck and may the force be with you!</p>
+            <p>&copy; 2019 Cermati.com</p>
+        </div>
+    </footer>
+
+    <div class="subscriptionpanel">
+            <div class="subscriptionpanel-inner">
+        <h5 class="subscriptionpanel-title">Get latest updates in web technologies</h5>
+        <p>I write articles related to web technologies, such as design trends, development
+                tools, UI/UX case studies and reviews, and more. Sign up to my newsletter to get
+                them all.</p>
+        <div class="subscriptionpanel-form">
+            <form action="">
+                <div class="form-wrapper">
+                    <div class="input-field">
+                    <input required type="email" name="email" value="" placeholder="Email Address">
+                    </div> 
+                    <button>Count me in!</button>
+                </div>
+            </form>
+        </div>
+        <a href="#" class="close"><i class="fas fa-times"></i></a>
+        </div>
+    </div>
+</body>
+</html>

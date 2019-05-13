@@ -1,0 +1,251 @@
+@import 'variables';
+@import 'base';
+
+
+.wrapper {
+    padding:0 1.5em; 
+    max-width: $sitewidth; 
+    margin: 0 auto; 
+    box-sizing: border-box;
+}
+
+.notificationpanel {
+    background-color: $smokegrey; 
+    font-size: 0.875em; 
+   
+    .wrapper {
+        max-width: $notification_max_width; 
+        margin: 0 auto; 
+        padding-top: 1em; 
+        padding-bottom: 1em; 
+        display: flex;
+        align-items: center;  
+        @include mq-min (961px) {
+            padding-top: 1.5em; 
+            padding-bottom: 1.5em; 
+        }
+    }
+    
+}
+
+.notificationpanel-content {
+    flex-grow: 1; 
+    p { 
+        @extend .nomargin; 
+        padding-right: 1em; 
+    }
+}
+
+.notificationpanel-action {
+    width: 120px; 
+    text-align: center; 
+    
+}
+
+
+
+.hero { 
+    height: 80vh; 
+    background-color: $blue; 
+    transition: height .5s; 
+    position: relative;
+    &-content {
+        max-width: $hero_max_width; 
+        margin: 0 auto; 
+    }
+    &.herofull {
+        height: 90vh;
+    }
+}
+
+.hero-back {
+    background: url('../images/work-desk__dustin-lee.jpg') no-repeat 50% 50%;
+    background-size: cover; 
+    height: 100%;
+    display: flex; 
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%; height: 100%; 
+        top: 0; left: 0; right: 0; bottom: 0; 
+        background: $darkblue; 
+        opacity: 0.6; 
+    }
+}
+
+.hero-front { 
+    position: absolute;
+    width: 100%; height: 100%; 
+    top: 0; left: 0; right: 0; bottom: 0; 
+    vertical-align: middle; 
+    display: flex; 
+    flex-direction: column; 
+    
+    .wrapper {
+        flex: 1; 
+        align-items: center; 
+        width: 100%; 
+        text-align: center; 
+        display: flex; 
+    }
+}
+
+
+.highlights {
+    .intro {
+        margin: 3.25em 0; 
+        .wrapper {
+            max-width: $notification_max_width; 
+            text-align: center; 
+        }
+
+        &-title {
+            font-size: 2.25em;
+            font-weight: 400;  
+            margin:0; 
+        }
+
+        p {
+            font-size: 1.125em; 
+            margin-top: 0.375em; 
+            margin-bottom: 0; 
+        }
+    }
+}
+
+.highlights-panels {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;  
+    margin-left: -.75em;
+    margin-right: -.75em;
+    margin-bottom: 3.5em; 
+    .hightlight-box {
+        
+        margin: .75em;  
+        border: 1px solid #ccc; 
+        box-sizing: border-box; 
+        box-shadow: inset 0 0 5px #ffffff;
+        padding: 1.5em; 
+        position: relative;
+
+        @include mq-min ($bpsmall + 1px) {
+            width: calc( 50% - 1.5em ) ; 
+        }
+
+        @include mq-min ($bpmedium + 1px) {
+            width: calc( 100% / 3 - 1.5em ) ; 
+        }
+    }
+
+    .highlight-title {
+        font-size: 1.5em;
+        line-height: 1.5em; 
+        margin:0 0 0.35em 0; 
+        font-weight: 400;
+    }
+
+    p {
+        margin-top: 0; 
+        font-size: 0.875em; 
+        
+    }
+
+    .highlight-icon {
+        position: absolute; 
+        top: 1em; 
+        right: 1em; 
+        i.fas {
+            font-size:2em; 
+            color: #999; 
+        }
+    }
+}
+
+
+
+
+footer {
+    background-color: $darkblue; 
+    text-align: center; 
+    .wrapper {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em; 
+    }
+
+    p {
+        font-size: .875em; 
+        color: #ffffff; 
+        margin: 0; 
+    }
+}
+
+
+.subscriptionpanel {
+    position: fixed; 
+    bottom: -100%; 
+    left: 0; 
+    transition: all .8s; 
+    max-width: $subscriptionpanel_max_width; 
+    &.open {
+        bottom:0; 
+    }
+
+    &-inner {
+        position: relative;
+        background-color: rgba(0, 123, 193, 0.9);
+        color: #ffffff; 
+        padding: 1.5em 1.5em 2.5em 1.5em;
+    }
+
+    &-title {
+        font-size: 1.75em; 
+        font-weight: 500; 
+        margin:0; 
+    }
+
+    .close {
+        position: absolute;
+        top: 1em; 
+        right: 1em; 
+        color: #ffffff; 
+    }
+
+    form { width: 100%;}
+    .form-wrapper {
+        display: flex; 
+        width: 100%; 
+        display: flex;
+        align-items: center;  
+        .input-field {
+            flex-grow: 1; 
+            input { width: calc(100% - 1em);  border-radius: 4px;   }
+        }
+
+        button {
+            width: 10em;  
+            @extend .button; 
+            color: #ffffff; 
+            border-radius: 4px; 
+
+        }
+    }
+}
+
+button {   
+    @extend .button; 
+    background-color: $orange;
+    border: none; 
+    box-sizing: border-box; 
+}
+
+input[type="text"],
+input[type="email"] {
+    font-size: 16px; 
+    padding-bottom:.5em;
+    padding-top:.5em;
+    padding-left: .5em;
+    border: none; 
+    background-color: #ffffff; 
+    padding-right: .5em; box-sizing: border-box; 
+} 

@@ -1,0 +1,367 @@
+/** MEDIA QUERY MIXINS **/
+html {
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-display: auto;
+  position: relative;
+  line-height: 1.5;
+  background-color: #e5e5e5;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+a {
+  color: #007bc1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #004a75;
+}
+
+.nomargin, .notificationpanel-content p {
+  margin: 0;
+}
+
+.button, .subscriptionpanel .form-wrapper button, button {
+  color: #363636;
+  cursor: pointer;
+  padding-bottom: .5em;
+  padding-left: .75em;
+  padding-right: .75em;
+  padding-top: .5em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.button-filled {
+  background-color: #fff;
+}
+
+.button-blue {
+  background-color: #007bc1;
+  color: #fff;
+}
+
+.button-blue:hover {
+  color: #fff;
+  background-color: #004a75;
+}
+
+.button-rounded {
+  border-radius: 4px;
+}
+
+.wrapper {
+  padding: 0 1.5em;
+  max-width: 1366px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.notificationpanel {
+  background-color: #e5e5e5;
+  font-size: 0.875em;
+}
+
+.notificationpanel .wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 961px) {
+  .notificationpanel .wrapper {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+}
+
+.notificationpanel-content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.notificationpanel-content p {
+  padding-right: 1em;
+}
+
+.notificationpanel-action {
+  width: 120px;
+  text-align: center;
+}
+
+.hero {
+  height: 80vh;
+  background-color: #007bc1;
+  -webkit-transition: height .5s;
+  transition: height .5s;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero.herofull {
+  height: 90vh;
+}
+
+.hero-back {
+  background: url("../images/work-desk__dustin-lee.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero-back:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #004a75;
+  opacity: 0.6;
+}
+
+.hero-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  vertical-align: middle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero-front .wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.highlights .intro {
+  margin: 3.25em 0;
+}
+
+.highlights .intro .wrapper {
+  max-width: 720px;
+  text-align: center;
+}
+
+.highlights .intro-title {
+  font-size: 2.25em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.highlights .intro p {
+  font-size: 1.125em;
+  margin-top: 0.375em;
+  margin-bottom: 0;
+}
+
+.highlights-panels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -.75em;
+  margin-right: -.75em;
+  margin-bottom: 3.5em;
+}
+
+.highlights-panels .hightlight-box {
+  margin: .75em;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: inset 0 0 5px #ffffff;
+          box-shadow: inset 0 0 5px #ffffff;
+  padding: 1.5em;
+  position: relative;
+}
+
+@media screen and (min-width: 481px) {
+  .highlights-panels .hightlight-box {
+    width: calc( 50% - 1.5em);
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .highlights-panels .hightlight-box {
+    width: calc( 100% / 3 - 1.5em);
+  }
+}
+
+.highlights-panels .highlight-title {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin: 0 0 0.35em 0;
+  font-weight: 400;
+}
+
+.highlights-panels p {
+  margin-top: 0;
+  font-size: 0.875em;
+}
+
+.highlights-panels .highlight-icon {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.highlights-panels .highlight-icon i.fas {
+  font-size: 2em;
+  color: #999;
+}
+
+footer {
+  background-color: #004a75;
+  text-align: center;
+}
+
+footer .wrapper {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+footer p {
+  font-size: .875em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.subscriptionpanel {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+  max-width: 640px;
+}
+
+.subscriptionpanel.open {
+  bottom: 0;
+}
+
+.subscriptionpanel-inner {
+  position: relative;
+  background-color: rgba(0, 123, 193, 0.9);
+  color: #ffffff;
+  padding: 1.5em 1.5em 2.5em 1.5em;
+}
+
+.subscriptionpanel-title {
+  font-size: 1.75em;
+  font-weight: 500;
+  margin: 0;
+}
+
+.subscriptionpanel .close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  color: #ffffff;
+}
+
+.subscriptionpanel form {
+  width: 100%;
+}
+
+.subscriptionpanel .form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subscriptionpanel .form-wrapper .input-field {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.subscriptionpanel .form-wrapper .input-field input {
+  width: calc(100% - 1em);
+  border-radius: 4px;
+}
+
+.subscriptionpanel .form-wrapper button {
+  width: 10em;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #ff8000;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="email"] {
+  font-size: 16px;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  padding-left: .5em;
+  border: none;
+  background-color: #ffffff;
+  padding-right: .5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=styles.css.map */
