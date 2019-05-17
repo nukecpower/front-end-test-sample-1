@@ -128,6 +128,18 @@ a:hover {
   height: 90vh;
 }
 
+.hero .logo {
+  position: absolute;
+  top: 1.5em;
+  left: 1.5em;
+  z-index: 100;
+}
+
+.hero .logo img {
+  max-width: 50px;
+  height: auto;
+}
+
 .hero-back {
   background: url("../images/work-desk__dustin-lee.jpg") no-repeat 50% 50%;
   background-size: cover;
@@ -146,8 +158,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #004a75;
-  opacity: 0.6;
+  background: rgba(0, 62, 131, 0.7);
 }
 
 .hero-front {
@@ -180,6 +191,51 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.hero-content {
+  color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-weight: 400;
+  font-size: 2.2500em;
+  margin: 0;
+}
+
+.hero-content h2 {
+  font-weight: 600;
+  font-size: 2em;
+  margin: 0 0 .5em 0;
+}
+
+.hero-content p {
+  font-weight: 400;
+  font-size: 1.125em;
+  margin: 0 0 .25em 0;
+}
+
+.hero-content p.hero-actions {
+  margin-top: 1.5em;
+}
+
+.hero-content p.hero-actions > a {
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  padding: .75em 2.5em;
+  color: #fff;
+  font-size: 0.889em;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.hero-content p.hero-actions > a:hover {
+  background-color: #ffffff;
+  color: #007bc1;
 }
 
 .highlights .intro {

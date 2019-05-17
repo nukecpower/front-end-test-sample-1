@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script>
         $(function() {
             $('.notificationpanel-action').click(function(){
@@ -20,15 +21,29 @@
             });
 
             $('.subscriptionpanel .close').click(function(e){
+                var tenMinutes = new Date(new Date().getTime() + 10 * 60 * 1000);
                 $('.subscriptionpanel').removeClass('open');
+                Cookies.set('closepanel', '1', { expires: tenMinutes });
                 e.preventDefault();
                 
             });
 
             $(window).scroll(function() {
-                if ($(this).scrollTop()>300)
+                var height = $(window).scrollTop();
+                var docheight = $(this).height(); 
+                var triggerpanel = Math.ceil(docheight / 2),
+                    paneldiv = $('.subscriptionpanel');
+                
+                var panelclosed = Cookies.get('closepanel');
+      
+                //console.log($(this).scrollTop());
+                if ($(this).scrollTop() > triggerpanel 
+                    && !paneldiv.hasClass('open')
+                    && (typeof panelclosed == 'undefined')
+                    )
                 {
-                    alert('abc');
+                    console.log(triggerpanel);
+                    paneldiv.addClass('open');
                 }
 
             });
@@ -46,15 +61,16 @@
     </div>
 
     <div class="hero">
+        <div class="logo"><a href="""><img src="assets/images/y-logo-white.png"></a></div>
         <div class="hero-back">&nbsp;</div>
         <div class="hero-front">
             <div class="wrapper">
                 <div class="hero-content">
                     <h1>Hello! I'm Sudirman</h1>
                     <h2>Consult, Design, and Develop Websites</h2>
-                    <h3>Have something great in mind? Feel free to contact me.
-                    I'll help you to make it happen.</h3>
-                    <p><a href="#">Let's Make Contact</a></p>
+                    <p>Have something great in mind? Feel free to contact me.</p>
+                    <p>I'll help you to make it happen.</p>
+                    <p class="hero-actions"><a href="#">Let's Make Contact</a></p>
                 </div>
             </div>
             
